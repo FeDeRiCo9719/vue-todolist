@@ -1,0 +1,28 @@
+/*---------------------- RESET ----------------------*/
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+/*---------------------- COMMON ----------------------*/
+body {
+    background-color: rgb(52, 79, 87);
+    padding-top: 50px;
+}
+.box {
+    width: 80%;
+    padding: 20px 0;
+    border-radius: 10px;
+    margin: auto;
+    background-color: rgb(235, 235, 235);
+}
+
+/*---------------------- HEADER ----------------------*/
+header {
+    text-align: center;
+}
+/*------- logo -------*/
+.logo {
+    width: 300px;
+    margin-bottom: 20px;
+}
