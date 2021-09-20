@@ -6,23 +6,69 @@
 }
 /*---------------------- COMMON ----------------------*/
 body {
-    background-color: rgb(52, 79, 87);
+    background-color: rgb(53, 58, 59);
     padding-top: 50px;
+    font-family: 'Lato', sans-serif;
 }
 .box {
     width: 80%;
-    padding: 20px 0;
+    padding: 50px 100px;
     border-radius: 10px;
     margin: auto;
-    background-color: rgb(235, 235, 235);
+    background-color: white;
 }
 
 /*---------------------- HEADER ----------------------*/
 header {
     text-align: center;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 50px;
 }
-/*------- logo -------*/
+/*------- Logo -------*/
 .logo {
     width: 300px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
+/*------- Nav -------*/
+nav button, nav input {
+    font-family: 'Lato', sans-serif;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid;
+    margin: 10px;
+}
+nav button {
+    cursor: pointer;
+    background-color: rgb(0, 119, 255);
+    color: white;
+    transition: 0.1s;
+}
+nav button:hover {
+    transition: 0.1s;
+    background-color: blue;
+}
+nav button:active {
+    background-color: rgb(0, 0, 168);
+}
+
+/*---------------------- MAIN ----------------------*/
+main section {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(128, 132, 136);
+    color: white;
+}
+main section ul li {
+    list-style: none;
+    border-bottom: 1px solid white;
+    padding: 10px;
+
+    display: flex;
+    justify-content: space-between;
+}
+main section ul li:hover {
+    transition: 0.1s;
+    background-color: rgb(88, 97, 104);
+    cursor: pointer;
+}
+
