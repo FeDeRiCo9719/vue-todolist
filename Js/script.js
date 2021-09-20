@@ -11,6 +11,30 @@ Prevedere inoltre un pulsante per modificare lo stato del singolo todo
 */
 
 var app = new Vue({
-    el: '',
-    data: {}
+    el: '#root',
+
+    data: {
+        todos: [
+            "Fare la spesa",
+            "Fare il bucato",
+            "Preparare il pranzo",
+            "Preparare la cena",
+        ],
+
+        // elemento da pushare nell'array
+        newTodo: '',
+    },
+
+    methods: {
+        addTodo: function() {
+            if ( this.newTodo != '' ) {
+                this.todos.push(this.newTodo);
+                this.newTodo = '';
+            }
+        },
+
+        removeTodo: function(indexTodo) {
+            this.todos.splice(indexTodo, 1)
+        }
+    }
 });

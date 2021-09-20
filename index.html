@@ -21,26 +21,24 @@
 </head>
 <body>
 
-    <div id="" class="box">
+    <div id="root" class="box">
         <!------------------------ HEADER ------------------------>
         <header>
             <div>
                 <img class="logo" src="img/logo.png" alt="">
             </div>
             <nav>
-                <input type="text" placeholder="Nuovo Todo">
-                <button>Aggiungi</button>
+                <input v-model='newTodo' type="text" placeholder="Nuovo Todo" @keyup.enter='addTodo' >
+                <button @click='addTodo'>Aggiungi</button>
             </nav>
         </header>
         <!------------------------ MAIN ------------------------>
         <main>
             <section>
-                <ul>
-                    <li>Fare la spesa <i class="fas fa-times-circle"></i></li>
-                    <li>Fare la spesa <i class="fas fa-times-circle"></i></li>
-                    <li>Fare la spesa <i class="fas fa-times-circle"></i></li>
-                    <li>Fare la spesa <i class="fas fa-times-circle"></i></li>
+                <ul v-if='todos.length > 0'>
+                    <li v-for='(todo, key) in todos' :key='index'>{{ todo }} <i @click='removeTodo(index)' class="fas fa-times-circle x-icon"></i></li>
                 </ul>
+                <h2 v-else>Non ci sono Todo</h2>
             </section>
         </main>
     </div>
